@@ -1,19 +1,19 @@
 # Homebrew formula template for kbagent (package: keboola-cli2, binary: kbagent).
-# The release workflow substitutes 0.71.0 and the per-arch {SHA256_*} and pushes
+# The release workflow substitutes 0.72.0 and the per-arch {SHA256_*} and pushes
 # the rendered formula to the kbagent-owned tap repo `keboola/homebrew-keboola-cli2`.
 # Wraps the prebuilt PyInstaller binary — no Python required on the user's machine.
 class KeboolaCli2 < Formula
   desc "AI-friendly CLI for managing Keboola projects (kbagent)"
   homepage "https://github.com/keboola/cli"
-  version "0.71.0"
+  version "0.72.0"
   license "MIT"
 
   on_macos do
     # Apple Silicon only (single macOS build env). Gate on arch so Intel Macs get a
     # clear error instead of a broken arm64 binary.
     on_arm do
-      url "https://cli-dist.keboola.com/keboola-cli2/v0.71.0/keboola-cli2_0.71.0_darwin_arm64.zip"
-      sha256 "f1165d0f72a4dec953ec17e27950f3b39a449a39e3e97cade5de865f603cedbd"
+      url "https://cli-dist.keboola.com/keboola-cli2/v0.72.0/keboola-cli2_0.72.0_darwin_arm64.zip"
+      sha256 "c72a46d831372cecd1246c08fab820913e042b02b15aea4a538062c5a5034eb3"
     end
     on_intel do
       odie "keboola-cli2 ships Apple Silicon only on macOS. Install via: uv tool install keboola-cli"
@@ -22,12 +22,12 @@ class KeboolaCli2 < Formula
 
   on_linux do
     on_arm do
-      url "https://cli-dist.keboola.com/keboola-cli2/v0.71.0/keboola-cli2_0.71.0_linux_arm64.zip"
-      sha256 "7f1f9e87a687a15b3bd43eb3e19316bc130ae517836b330cc1f4a809d9b26bcd"
+      url "https://cli-dist.keboola.com/keboola-cli2/v0.72.0/keboola-cli2_0.72.0_linux_arm64.zip"
+      sha256 "be444648ebf80559ae71b043a6b1633c5e37f092fc4aeae67f5d593d6f5586b2"
     end
     on_intel do
-      url "https://cli-dist.keboola.com/keboola-cli2/v0.71.0/keboola-cli2_0.71.0_linux_amd64.zip"
-      sha256 "67b9194577b328d22ce9ce7fbf894bcdf2b978edfb8cb9c3c564363cc8b5b5a4"
+      url "https://cli-dist.keboola.com/keboola-cli2/v0.72.0/keboola-cli2_0.72.0_linux_amd64.zip"
+      sha256 "75fa82bcf2fc145d8df2a4d03285ec76c51cb4c28ddcccb5293d422dbddc42e2"
     end
   end
 
