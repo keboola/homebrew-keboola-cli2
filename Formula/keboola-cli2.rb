@@ -1,19 +1,19 @@
 # Homebrew formula template for kbagent (package: keboola-cli2, binary: kbagent).
-# The release workflow substitutes 0.95.0 and the per-arch {SHA256_*} and pushes
+# The release workflow substitutes 0.96.1 and the per-arch {SHA256_*} and pushes
 # the rendered formula to the kbagent-owned tap repo `keboola/homebrew-keboola-cli2`.
 # Wraps the prebuilt PyInstaller binary — no Python required on the user's machine.
 class KeboolaCli2 < Formula
   desc "AI-friendly CLI for managing Keboola projects (kbagent)"
   homepage "https://github.com/keboola/cli"
-  version "0.95.0"
+  version "0.96.1"
   license "Apache-2.0"
 
   on_macos do
     # Apple Silicon only (single macOS build env). Gate on arch so Intel Macs get a
     # clear error instead of a broken arm64 binary.
     on_arm do
-      url "https://cli-dist.keboola.com/keboola-cli2/v0.95.0/keboola-cli2_0.95.0_darwin_arm64.zip"
-      sha256 "c2f290b733d805ca507e8021d47e95eb6603144b277017620fdb9838789cc140"
+      url "https://cli-dist.keboola.com/keboola-cli2/v0.96.1/keboola-cli2_0.96.1_darwin_arm64.zip"
+      sha256 "3f21d473f0489265baabcde29a20cf947f527e60ca4c468a3d821b5259a36c55"
     end
     on_intel do
       odie "keboola-cli2 ships Apple Silicon only on macOS. Install via: uv tool install keboola-cli"
@@ -22,12 +22,12 @@ class KeboolaCli2 < Formula
 
   on_linux do
     on_arm do
-      url "https://cli-dist.keboola.com/keboola-cli2/v0.95.0/keboola-cli2_0.95.0_linux_arm64.zip"
-      sha256 "508a5e2ada614945a4636057a242e164ce7df3242449433ddd7e0cfa87c31952"
+      url "https://cli-dist.keboola.com/keboola-cli2/v0.96.1/keboola-cli2_0.96.1_linux_arm64.zip"
+      sha256 "4ef6b094c26f7b7555c02812b77a15e3ce33a3638240b354f234def738d0132f"
     end
     on_intel do
-      url "https://cli-dist.keboola.com/keboola-cli2/v0.95.0/keboola-cli2_0.95.0_linux_amd64.zip"
-      sha256 "7dcc66e986e9717dea4a91ac608b2a2204ca2267e38aa22f7a8df3ccfbaa1848"
+      url "https://cli-dist.keboola.com/keboola-cli2/v0.96.1/keboola-cli2_0.96.1_linux_amd64.zip"
+      sha256 "8a176ebe1a36a18c882ef2926cd60376d692626a853e91642507055c4fae0bd4"
     end
   end
 
